@@ -1,9 +1,12 @@
-//Take two numbers and print their sum, difference, product, and quotient.
+//Functions as First-class Objects in Dart
 void main(){
-   int a=5;
-   int b=4;
-   print('sum ${a+b}');
-print ('divide ${a/b}');
-print ('multiply ${a*b}');
-print ('diff ${a-b}');
+  student("Hi", identity);
+}
+
+Function identity(dynamic r){
+  return r;
+}
+
+void student(String a, Function n){
+  print('$a, ${n("Muhammad Uzair")}');
 }
