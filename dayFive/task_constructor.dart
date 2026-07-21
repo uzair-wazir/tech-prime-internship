@@ -1,3 +1,5 @@
+//parametaerised constructor
+
 void main(){
 
 var obj=Student('uzair',20);
