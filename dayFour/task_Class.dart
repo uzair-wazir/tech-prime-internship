@@ -1,10 +1,10 @@
-void main(){
-var obj=Dog();
-obj.display();
+void main() {
+  var obj = Dog();
+  obj.display();
 }
-class Dog{
-   void display(){
-    print('bow bow');
-   }
 
+class Dog {
+  void display() {
+    print('bow bow');
+  }
 }

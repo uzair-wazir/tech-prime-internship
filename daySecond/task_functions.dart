@@ -1,12 +1,12 @@
 //Functions as First-class Objects in Dart
-void main(){
+void main() {
   student("Hi", name);
 }
 
-Function name=(String r){
+Function name = (String r) {
   return r;
 };
 
-void student(String a, Function n){
+void student(String a, Function n) {
   print('$a ${n("Muhammad Uzair")}');
 }
