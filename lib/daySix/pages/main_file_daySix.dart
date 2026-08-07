@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const TaskMainPage(),
+      home: TaskMainPage(),
       routes: {
-        '/taskMainPage': (context) => const TaskMainPage(),
+        '/taskMainPage': (context) => TaskMainPage(),
         '/taskHomePage': (context) => const HomePage(),
         '/taskProfilePage': (context) => const ProfilePage(),
         '/taskSettingPage': (context) => const SettingPage(),
