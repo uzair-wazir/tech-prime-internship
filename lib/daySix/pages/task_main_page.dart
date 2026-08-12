@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
-import 'profile_page.dart';
 import 'setting_page.dart';
+import 'room_page.dart';
 
 class TaskMainPage extends StatefulWidget {
   TaskMainPage({super.key});
@@ -21,14 +21,15 @@ class _TaskMainPageState extends State<TaskMainPage> {
   }
 
   //the pages we have in our app
-  final List _pages = [HomePage(), ProfilePage(), SettingPage()];
+  final List _pages = [HomePage(), RoomPage(), SettingPage()];
+  final List<String> _titles = const ['COZY LIGHTS HOSTEL', 'ROOM', 'SETTING'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(186, 104, 200, 1),
-        title: Text("COZY LIGHTS HOSTELS"),
+        title: Text(_titles[_selectedIndex]), // ← use the list here
       ),
       body: _pages[_selectedIndex], //display the current page
       bottomNavigationBar: BottomNavigationBar(
@@ -37,7 +38,7 @@ class _TaskMainPageState extends State<TaskMainPage> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'HOME'),
 
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'PROFILE'),
+          BottomNavigationBarItem(icon: Icon(Icons.room), label: 'ROOM'),
 
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'SETTING'),
         ],

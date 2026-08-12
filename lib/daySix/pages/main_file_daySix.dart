@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
-import 'profile_page.dart';
+import 'room_page.dart';
 import 'setting_page.dart';
 import 'task_main_page.dart';
 
@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       home: TaskMainPage(),
       routes: {
         '/taskMainPage': (context) => TaskMainPage(),
-        '/taskHomePage': (context) => const HomePage(),
-        '/taskProfilePage': (context) => const ProfilePage(),
-        '/taskSettingPage': (context) => const SettingPage(),
+        '/taskHomePage': (context) => HomePage(),
+        '/taskProfilePage': (context) => RoomPage(),
+        '/taskSettingPage': (context) => SettingPage(),
       },
     );
   }
