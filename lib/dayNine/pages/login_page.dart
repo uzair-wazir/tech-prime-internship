@@ -1,20 +1,23 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class TodoPage extends StatefulWidget {
-  const TodoPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<TodoPage> createState() => _ToDoPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _ToDoPageState extends State<TodoPage> {
+class _LoginPageState extends State<LoginPage> {
   //text editing controller to get access to what the user typed
   TextEditingController myControllerGmail = TextEditingController();
   TextEditingController myControllerPassword = TextEditingController();
   //greetuser methode
-  void greetUser() {
-    print(myControllerGmail.text);
-    print(myControllerPassword.text);
+  void details() {
+    if (kDebugMode) {
+      print(myControllerGmail.text);
+      print(myControllerPassword.text);
+    }
   }
 
   @override
@@ -60,7 +63,7 @@ class _ToDoPageState extends State<TodoPage> {
                 width: 400, // set your desired width
                 height: 50, // set your desired height
                 child: ElevatedButton(
-                  onPressed: greetUser,
+                  onPressed: details,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.pinkAccent[200],
                     shadowColor: Colors.pinkAccent[200],
