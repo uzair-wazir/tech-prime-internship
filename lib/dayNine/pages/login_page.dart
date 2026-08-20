@@ -20,6 +20,8 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
+  bool showHidepwd = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +32,11 @@ class _LoginPageState extends State<LoginPage> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
+
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset('image/logo.jpeg', height: 180, fit: BoxFit.contain),
               Align(
                 alignment: Alignment
                     .centerLeft, // change to .center, .centerRight, etc.
@@ -52,8 +56,19 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 12),
               TextField(
+                obscureText: showHidepwd,
                 controller: myControllerPassword,
                 decoration: InputDecoration(
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        showHidepwd = !showHidepwd;
+                      });
+                    },
+                    icon: Icon(
+                      showHidepwd ? Icons.visibility : Icons.visibility_off,
+                    ),
+                  ),
                   border: OutlineInputBorder(),
                   hintText: 'Add Password',
                 ),
